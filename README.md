@@ -4,13 +4,13 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ksh1tij777" alt="ksh1tij777" /></a> </p>
 
-- 🔭 I’m currently working on [Electricity Cost predictor](https://github.com/Ksh1tij777/Electricity-Price-Prediction)
+- I’m currently working on [Electricity Cost predictor](https://github.com/Ksh1tij777/Electricity-Price-Prediction)
 
-- 🌱 I’m currently learning **Machine Learning and Data Science**
+- I’m currently learning **Machine Learning and Data Science**
 
-- 👯 I’m looking to collaborate on **ML projects**
+- I’m looking to collaborate on **ML projects**
 
-- 📫 How to reach me **vermakshitij747@gmail.com**
+- How to reach me **vermakshitij747@gmail.com**
 
 - Previous Experience : **Trainee at Mentox, Summer intern at Gnani.ai**
 
