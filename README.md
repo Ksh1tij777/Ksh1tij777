@@ -1,7 +1,6 @@
 <h1 align="center">Hi, I'm Kshitij</h1>
 <h3 align="center">just your friendly neihbourhood contributor</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=ksh1tij777&label=Profile%20views&color=0e75b6&style=flat" alt="ksh1tij777" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ksh1tij777" alt="ksh1tij777" /></a> </p>
 
@@ -34,12 +33,6 @@
 
 <div align="center">
   <img height="200" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjI3NncycXFpbGRvcXJ1bWFkaWt5c2IxY2F3czdvdzRsbHN0bTQ4ayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7zdsOWDgSCzDi/giphy.gif"  />
-</div>
-
-###
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/snake.svg" alt="Snake animation" />
 </div>
 
 
