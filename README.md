@@ -38,8 +38,9 @@
 
 ###
 
-
-<img src="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/snake.svg" alt="Snake animation" />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/snake.svg" alt="Snake animation" />
+</div>
 
 
 
