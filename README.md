@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg?v=3" width="100%" alt="Kshitij Verma — builds models that look closely. ML engineer at Surveyors AI; B.Tech CCE, LNMIIT Jaipur; 1st of 14,000+ at the Google Cloud Rapid Agent Hackathon." />
+  <img src="assets/header.svg?v=4" width="100%" alt="Kshitij Verma — builds models that look closely. ML engineer at Surveyors AI; B.Tech CCE, LNMIIT Jaipur; 1st of 14,000+ at the Google Cloud Rapid Agent Hackathon; winner of HackCrux." />
 </p>
 
 <p align="center">
@@ -11,63 +11,64 @@
 
 I work on computer vision for motor insurance — finding the dent, the scratch and the suspicious claim in a phone photo — as an ML engineer at Surveyors AI. Outside work I build agents that keep other agents honest, turn raw driving data into risk scores, and coordinate the astronomy club at LNMIIT, which is where the star chart above comes from.
 
-<img src="assets/divider.svg?v=3" width="100%" />
+<img src="assets/divider.svg?v=4" width="100%" />
 
-### Featured
+### Wins
 
-<a href="https://github.com/SirjanSingh/cassandra"><img src="assets/projects/02-cassandra.svg?v=3" width="100%" alt="Cassandra — the agent that watches agents. 1st of 14,000+, Google Cloud Rapid Agent Hackathon." /></a>
-
-**First place, Arize track — Google Cloud Rapid Agent Hackathon 2026.** 14,000+ participants, $5,000 prize. Built with [Sirjan Singh](https://github.com/SirjanSingh). [Code →](https://github.com/SirjanSingh/cassandra)
-
-<img src="assets/divider.svg?v=3" width="100%" />
-
-### Selected work
+<img src="assets/wins.svg?v=4" width="100%" alt="1st of 14,000+ at the Google Cloud Rapid Agent Hackathon 2026 with Cassandra; winner of HackCrux with a telematics project." />
 
 <table>
 <tr>
-<td width="50%" valign="top"><img src="assets/projects/01-route-resilience.svg?v=3" width="100%" alt="Route Resilience — satellite roads to city resilience" /><br/>ISRO / NNRMS hackathon</td>
-<td width="50%" valign="top"><a href="https://github.com/Ksh1tij777/Car_Behaviour"><img src="assets/projects/03-driver-score.svg?v=3" width="100%" alt="Driver Safety Score — telematics to insurance risk" /></a><br/><a href="https://github.com/Ksh1tij777/Car_Behaviour">Code →</a></td>
+<td width="50%" valign="top"><a href="https://github.com/SirjanSingh/cassandra"><img src="assets/projects/02-cassandra.svg?v=4" width="100%" alt="Cassandra — the agent that watches agents" /></a><br/><b>1st of 14,000+</b> · Google Cloud Rapid Agent Hackathon 2026 · with <a href="https://github.com/SirjanSingh">Sirjan Singh</a> · <a href="https://github.com/SirjanSingh/cassandra">code →</a></td>
+<td width="50%" valign="top"><a href="https://github.com/Ksh1tij777/Car_Behaviour"><img src="assets/projects/03-driver-score.svg?v=4" width="100%" alt="Driver Safety Score — telematics to insurance risk" /></a><br/><b>Winner</b> · HackCrux, 36-hour national hackathon · <a href="https://github.com/Ksh1tij777/Car_Behaviour">code →</a></td>
 </tr>
 </table>
 
-Also: a damage-segmentation and fraud pipeline for two-wheeler claims (private, at work) · [LNMAchieves](https://github.com/Ksh1tij777/SWE_PROJECT), a student achievement portal · [Stock Order Replicator](https://github.com/Ksh1tij777/Stock_Bot) · [Electricity price prediction](https://github.com/Ksh1tij777/Electricity-Price-Prediction) served with FastAPI.
+<img src="assets/divider.svg?v=4" width="100%" />
 
-<img src="assets/divider.svg?v=3" width="100%" />
+### More work
 
-### Record
+<table>
+<tr>
+<td width="50%" valign="top"><img src="assets/projects/04-damage-ai.svg?v=4" width="100%" alt="Two-wheeler damage AI — computer vision for insurance claims" /><br/>In production at Surveyors AI · private</td>
+<td width="50%" valign="top"><img src="assets/projects/01-route-resilience.svg?v=4" width="100%" alt="Route Resilience — satellite roads to city resilience" /><br/>ISRO / NNRMS hackathon</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="assets/projects/06-turbulence.svg?v=4" width="100%" alt="Turbulence corrector — restoring telescope images" /><br/>Major project, LNMIIT</td>
+<td width="50%" valign="top"><img src="assets/projects/05-music-separation.svg?v=4" width="100%" alt="Music source separation — one track in, four stems out" /><br/>PyTorch · MUSDB18</td>
+</tr>
+</table>
 
-| | |
-|---|---|
-| Google Cloud Rapid Agent Hackathon | **1st of 14,000+** |
-| HackCrux, 36 hours | **Winner** — telematics |
-| Space IDEATHON | **1st** |
-| Space Hackathon | **2nd** |
-| Control+Space | **4th** |
-| Smart India Hackathon | Round 1 qualified |
+Also: [LNMAchieves](https://github.com/Ksh1tij777/SWE_PROJECT), a student achievement portal · [Stock Order Replicator](https://github.com/Ksh1tij777/Stock_Bot) · [Electricity price prediction](https://github.com/Ksh1tij777/Electricity-Price-Prediction) served with FastAPI. Previously AI engineering intern at Gnani.ai (voice bots, TTS/STT) and mentor & organizer at Mentox.
 
-Previously AI engineering intern at Gnani.ai (voice bots, TTS/STT) and mentor & organizer at Mentox.
+<img src="assets/divider.svg?v=4" width="100%" />
 
-<img src="assets/divider.svg?v=3" width="100%" />
+<table>
+<tr>
+<td width="50%"><img src="assets/record.svg?v=4" width="100%" alt="Hackathon record" /></td>
+<td width="50%"><img src="assets/sky.svg?v=4" width="100%" alt="Tonight over Jaipur: moon phase and Betelgeuse, updated daily" /></td>
+</tr>
+</table>
 
-<img src="assets/toolkit.svg?v=3" width="100%" alt="Toolkit" />
+<img src="assets/toolkit.svg?v=4" width="100%" alt="Toolkit" />
 
-<img src="assets/divider.svg?v=3" width="100%" />
+<img src="assets/divider.svg?v=4" width="100%" />
 
 ### Telemetry
 
 <table>
 <tr>
-<td width="50%"><img src="assets/stats/overview.svg?v=3" width="100%" alt="GitHub stats: contributions, commits, merged PRs, repos, stars, streaks" /></td>
-<td width="50%"><img src="assets/stats/languages.svg?v=3" width="100%" alt="Languages by code size" /></td>
+<td width="50%"><img src="assets/stats/overview.svg?v=4" width="100%" alt="GitHub stats: contributions, commits, merged PRs, repos, stars, streaks" /></td>
+<td width="50%"><img src="assets/stats/languages.svg?v=4" width="100%" alt="Languages by code size" /></td>
 </tr>
 </table>
 
-<img src="assets/stats/activity.svg?v=3" width="100%" alt="Contribution activity, last 90 days" />
+<img src="assets/stats/activity.svg?v=4" width="100%" alt="Contribution activity, last 90 days" />
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/github-snake-dark.svg?v=3" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/github-snake.svg?v=3" />
-  <img alt="A snake eating the contribution grid" src="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/github-snake-dark.svg?v=3" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/github-snake-dark.svg?v=4" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/github-snake.svg?v=4" />
+  <img alt="A snake eating the contribution grid" src="https://raw.githubusercontent.com/Ksh1tij777/Ksh1tij777/output/github-snake-dark.svg?v=4" width="100%" />
 </picture>
 
-<p align="right"><sub>Every graphic here is generated by scripts in this repo; stats refresh twice a day.</sub></p>
+<p align="right"><sub>Every graphic here is generated by scripts in this repo; stats and tonight's sky refresh twice a day.</sub></p>

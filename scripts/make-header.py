@@ -59,8 +59,8 @@ left = (
     + f'<line x1="48" x2="700" y1="250" y2="250" stroke="{RULE}"/>'
     + text(48, 278, "ML ENGINEER, SURVEYORS AI", "m", 11, FG, ls=1.4)
     + text(48, 298, "B.TECH CCE, LNMIIT JAIPUR · '28", "m", 11, MUTED, ls=1.4)
-    + text(372, 278, "1ST OF 14,000+", "mm", 11, ACCENT, ls=1.4)
-    + text(372, 298, "GOOGLE CLOUD RAPID AGENT HACKATHON", "m", 11, MUTED, ls=1.4)
+    + text(372, 278, "1ST OF 14,000+ · GOOGLE CLOUD", "mm", 11, ACCENT, ls=1.4)
+    + text(372, 298, "WINNER · HACKCRUX", "mm", 11, ACCENT, ls=1.4)
 )
 
 css = """

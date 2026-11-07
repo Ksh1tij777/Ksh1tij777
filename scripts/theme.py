@@ -18,12 +18,13 @@ from fontTools.ttLib import TTFont
 
 FONTS = Path(__file__).resolve().parent / "fonts"
 
-# palette ------------------------------------------------------------------
-BG = "#141311"      # charcoal paper
-RULE = "#2c2a26"    # hairlines
-FAINT = "#47433c"   # inactive marks
-MUTED = "#8d8579"   # secondary text
-FG = "#ece5d8"      # cream ink
+# palette (matches GitHub dark) ------------------------------------------
+PANEL = "#161b22"   # GitHub raised surface
+BG = "#0d1117"      # GitHub dark canvas
+RULE = "#30363d"    # GitHub border
+FAINT = "#484f58"   # inactive marks
+MUTED = "#8b949e"   # secondary text
+FG = "#e6edf3"      # GitHub foreground
 ACCENT = "#ff5b35"  # vermilion — the one loud colour
 OCHRE = "#d8a34a"
 SAGE = "#9db38f"
@@ -91,8 +92,8 @@ MOTION_CSS = """
 
 
 def svg(w, h, body, label, css="", frame=True):
-    border = (f'<rect width="{w}" height="{h}" fill="{BG}"/>'
-              f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" fill="none" stroke="{RULE}"/>') if frame else ""
+    border = (f'<rect width="{w}" height="{h}" rx="6" fill="{BG}"/>'
+              f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="6" fill="none" stroke="{RULE}"/>') if frame else ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" '
             f'role="img" aria-label="{html.escape(label)}"><style>{font_css(body)}{MOTION_CSS}{css}</style>'
             f'{border}{body}</svg>')

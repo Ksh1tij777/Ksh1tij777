@@ -8,4 +8,4 @@
 @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;stroke-dashoffset:0!important;transform:none!important}}
 
 .drift{animation:drift 12s linear infinite}
-@keyframes drift{from{transform:translateX(-40px)}to{transform:translateX(1240px)}}</style><line x1="0" x2="1200" y1="10" y2="10" stroke="#2c2a26"/><rect class="drift" x="0" y="9" width="36" height="2" fill="#ff5b35"/></svg>
+@keyframes drift{from{transform:translateX(-40px)}to{transform:translateX(1240px)}}</style><line x1="0" x2="1200" y1="10" y2="10" stroke="#30363d"/><rect class="drift" x="0" y="9" width="36" height="2" fill="#ff5b35"/></svg>

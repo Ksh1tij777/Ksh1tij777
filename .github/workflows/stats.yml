@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/make-stats.py", "scripts/theme.py", "scripts/fonts/**", ".github/workflows/stats.yml"]
+    paths: ["scripts/make-stats.py", "scripts/make-sky.py", "scripts/theme.py", "scripts/fonts/**", ".github/workflows/stats.yml"]
 
 permissions:
   contents: write
@@ -24,13 +24,15 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install fonttools brotli
-      - name: Render stats cards
-        run: python scripts/make-stats.py ${{ github.repository_owner }}
+      - name: Render stats cards and tonight's sky
+        run: |
+          python scripts/make-stats.py ${{ github.repository_owner }}
+          python scripts/make-sky.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats
+          git add assets/stats assets/sky.svg
           git diff --cached --quiet || (git commit -m "chore: refresh stats" && git pull --rebase && git push)
