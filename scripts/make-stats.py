@@ -21,20 +21,17 @@ USER = next((a for a in sys.argv[1:] if not a.startswith("--")), os.environ.get(
 EXCLUDE = {"HTML", "Batchfile"}  # generated/boilerplate files skew byte counts
 OUT = Path(__file__).resolve().parent.parent / "assets" / "stats"
 
-BG, FG, MUTED, RULE = "#0d1124", "#e6e9f5", "#8b93b0", "#2a3150"
-LAV, CYAN, AMBER, GREEN = "#a5b4fc", "#67e8f9", "#fcd34d", "#86efac"
-MONO = "'JetBrains Mono','IBM Plex Mono',Consolas,'SFMono-Regular',Menlo,monospace"
-SANS = "'Inter','Segoe UI',Helvetica,Arial,sans-serif"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from theme import ACCENT, BG, FAINT, FG, MUTED, OCHRE, RULE, SAGE, svg as theme_svg, text as ttext
+
+LANG_INK = [ACCENT, FG, OCHRE, SAGE, MUTED, FAINT]
 CSS = """
-.fade{opacity:0;animation:fade .7s ease-out forwards}
-@keyframes fade{to{opacity:1}}
 .grow{transform-box:fill-box;transform-origin:left;transform:scaleX(0);animation:grow 1.2s cubic-bezier(.2,.8,.2,1) forwards}
 @keyframes grow{to{transform:scaleX(1)}}
-.draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 2.4s ease-out .2s forwards}
+.draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 2.6s ease-out .2s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 1.8s ease-out infinite}
-@keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:.8}100%{transform:scale(2.6);opacity:0}}
 """
 
 QUERY = """
@@ -57,20 +54,15 @@ query($login:String!){
 }"""
 
 
-def esc(s: str) -> str:
-    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-
-
-def t(x, y, s, size=11, fill=MUTED, font=MONO, anchor="start", weight=None, ls=1.2, extra=""):
-    w = f' font-weight="{weight}"' if weight else ""
-    return (f'<text x="{x}" y="{y}" font-family="{font}" font-size="{size}" fill="{fill}" '
-            f'text-anchor="{anchor}" letter-spacing="{ls}"{w} {extra}>{esc(str(s))}</text>')
+def t(x, y, s, size=11, fill=MUTED, font="m", anchor="start", weight=None, ls=1.2, extra=""):
+    cls = font if font in ("d", "di", "m", "mm", "s") else "m"
+    if weight and cls == "m":
+        cls = "mm"
+    return ttext(x, y, s, cls, size, fill, anchor, ls, extra)
 
 
 def svg(w, h, body, label):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{esc(label)}">'
-            f'<style>{CSS}</style><rect width="{w}" height="{h}" rx="14" fill="{BG}"/>'
-            f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="14" fill="none" stroke="{RULE}"/>{body}</svg>')
+    return theme_svg(w, h, body, label, CSS)
 
 
 # ------------------------------------------------------------------ data
@@ -132,23 +124,23 @@ def overview(u):
     current, longest = streaks(days)
     stars = sum(r["stargazerCount"] for r in u["repositories"]["nodes"])
     stats = [
-        ("CONTRIBUTIONS · 1Y", cc["contributionCalendar"]["totalContributions"], LAV),
-        ("COMMITS · 1Y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"], CYAN),
-        ("PRS MERGED", u["merged"]["totalCount"], GREEN),
+        ("CONTRIBUTIONS · 1Y", cc["contributionCalendar"]["totalContributions"], FG),
+        ("COMMITS · 1Y", cc["totalCommitContributions"] + cc["restrictedContributionsCount"], FG),
+        ("PRS MERGED", u["merged"]["totalCount"], ACCENT),
         ("PUBLIC REPOS", u["repositories"]["totalCount"], FG),
-        ("STARS EARNED", stars, AMBER),
+        ("STARS EARNED", stars, FG),
         ("ISSUES OPENED", u["issues"]["totalCount"], FG),
     ]
-    body = t(28, 38, "TELEMETRY", 11, CYAN, ls=1.8) + t(572, 38, f"@{u['login']}", 11, AMBER, anchor="end", ls=1.2)
+    body = t(28, 40, "BY THE NUMBERS", 10.5, MUTED, ls=1.8) + t(572, 40, f"@{u['login']}", 10.5, ACCENT, anchor="end", weight=500, ls=1.2)
     for i, (label, val, col) in enumerate(stats):
         x, y = 28 + (i % 3) * 186, 92 + (i // 3) * 74
         body += (f'<g class="fade" style="animation-delay:{.1 + i * .12:.2f}s">'
-                 + t(x, y, f"{val:,}", 30, col, SANS, weight=700, ls=-.5)
-                 + t(x, y + 22, label, 10, MUTED, ls=1.4) + "</g>")
+                 + t(x, y + 4, f"{val:,}", 44, col, "d", ls=-.5)
+                 + t(x, y + 24, label, 9.5, MUTED, ls=1.4) + "</g>")
     # streak strip
     body += f'<line x1="28" x2="572" y1="226" y2="226" stroke="{RULE}"/>'
-    flame = f'<circle class="pulse" cx="40" cy="256" r="5" fill="none" stroke="{AMBER}" stroke-width="1.5"/><circle cx="40" cy="256" r="4" fill="{AMBER}"/>'
-    body += flame + t(56, 261, f"{current}-day current streak" if current else "No active streak — today's a good day to start", 13, FG, SANS, ls=0)
+    flame = f'<circle class="pulse" cx="40" cy="256" r="5" fill="none" stroke="{ACCENT}" stroke-width="1.2"/><circle cx="40" cy="256" r="3.5" fill="{ACCENT}"/>'
+    body += flame + t(56, 261, f"{current}-day current streak" if current else "No active streak — today's a good day to start", 15, FG, "di", ls=0)
     body += t(572, 261, f"longest streak · {longest} days", 11, MUTED, anchor="end", ls=.8)
     return svg(600, 290, body, f"GitHub stats for {u['login']}")
 
@@ -160,10 +152,11 @@ def languages(u):
             n = e["node"]["name"]
             if n in EXCLUDE:
                 continue
-            totals.setdefault(n, [0, e["node"]["color"] or LAV])[0] += e["size"]
+            totals.setdefault(n, [0, None])[0] += e["size"]
     top = sorted(totals.items(), key=lambda kv: -kv[1][0])[:6]
+    top = [(n, (v[0], LANG_INK[i])) for i, (n, v) in enumerate(top)]
     total = sum(v[0] for _, v in top) or 1
-    body = t(28, 38, "LANGUAGES", 11, CYAN, ls=1.8) + t(572, 38, "BY CODE SIZE · PUBLIC REPOS", 11, AMBER, anchor="end", ls=1.2)
+    body = t(28, 40, "WRITTEN IN", 10.5, MUTED, ls=1.8) + t(572, 40, "BY CODE SIZE · PUBLIC REPOS", 10.5, ACCENT, anchor="end", weight=500, ls=1.2)
     # stacked bar
     x = 28
     for i, (name, (size, color)) in enumerate(top):
@@ -174,8 +167,8 @@ def languages(u):
         cx, cy = 28 + (i % 2) * 280, 112 + (i // 2) * 52
         pct = 100 * size / total
         body += (f'<g class="fade" style="animation-delay:{.3 + i * .1:.2f}s">'
-                 f'<circle cx="{cx + 6}" cy="{cy - 5}" r="6" fill="{color}"/>'
-                 + t(cx + 22, cy, name, 14, FG, SANS, ls=0)
+                 f'<rect x="{cx + 1}" y="{cy - 10}" width="10" height="10" fill="{color}"/>'
+                 + t(cx + 22, cy, name, 20, FG, "d", ls=0)
                  + t(cx + 250, cy, f"{pct:.1f}%", 12, MUTED, anchor="end", ls=.4)
                  + f'<rect x="{cx + 22}" y="{cy + 10}" width="228" height="3" rx="1.5" fill="{RULE}"/>'
                  + f'<rect class="grow" style="animation-delay:{.4 + i * .1:.2f}s" x="{cx + 22}" y="{cy + 10}" width="{228 * pct / 100:.1f}" height="3" rx="1.5" fill="{color}"/>'
@@ -185,7 +178,7 @@ def languages(u):
 
 def activity(u):
     days = [d for w in u["contributionsCollection"]["contributionCalendar"]["weeks"] for d in w["contributionDays"]][-90:]
-    W, H, L, R, T, B = 1200, 280, 60, 30, 64, 44
+    W, H, L, R, T, B = 1200, 280, 60, 30, 80, 44
     vals = [d["contributionCount"] for d in days]
     vmax = max(max(vals), 4)
     n = len(vals)
@@ -200,10 +193,10 @@ def activity(u):
         c2 = (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6)
         d += f" C{c1[0]:.1f} {min(c1[1], H - B):.1f} {c2[0]:.1f} {min(c2[1], H - B):.1f} {p2[0]:.1f} {p2[1]:.1f}"
     area = d + f" L{xs[-1]:.1f} {H - B} L{xs[0]:.1f} {H - B}Z"
-    body = (f'<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{LAV}" stop-opacity=".35"/>'
-            f'<stop offset="1" stop-color="{LAV}" stop-opacity="0"/></linearGradient></defs>')
-    body += t(28, 38, "ACTIVITY · LAST 90 DAYS", 11, CYAN, ls=1.8)
-    body += t(W - 28, 38, f"{sum(vals)} contributions", 11, AMBER, anchor="end", ls=1.2)
+    body = (f'<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{FG}" stop-opacity=".14"/>'
+            f'<stop offset="1" stop-color="{FG}" stop-opacity="0"/></linearGradient></defs>')
+    body += t(28, 40, "ACTIVITY · LAST 90 DAYS", 10.5, MUTED, ls=1.8)
+    body += t(W - 28, 40, f"{sum(vals)} CONTRIBUTIONS", 10.5, ACCENT, anchor="end", weight=500, ls=1.2)
     for k in range(5):
         gy = T + k * (H - T - B) / 4
         body += f'<line x1="{L}" x2="{W - R}" y1="{gy:.1f}" y2="{gy:.1f}" stroke="{RULE}" stroke-dasharray="2 5"/>'
@@ -213,11 +206,11 @@ def activity(u):
         body += t(xs[i], H - 18, day.strftime("%d %b"), 10, MUTED, anchor="middle", ls=.4)
     body += f'<path class="fade" style="animation-delay:1.2s" d="{area}" fill="url(#ag)"/>'
     plen = int(sum(math.hypot(xs[k+1]-xs[k], ys[k+1]-ys[k]) for k in range(n-1)) * 1.15) + 50
-    body += f'<path class="draw" style="--len:{plen}" d="{d}" stroke="{LAV}" stroke-width="2.4" fill="none" stroke-linejoin="round"/>'
+    body += f'<path class="draw" style="--len:{plen}" d="{d}" stroke="{FG}" stroke-width="1.6" fill="none" stroke-linejoin="round"/>'
     i = max(range(n), key=lambda k: vals[k])
-    body += (f'<g class="fade" style="animation-delay:2.2s"><circle class="pulse" cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="5" fill="none" stroke="{AMBER}" stroke-width="1.5"/>'
-             f'<circle cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="4" fill="{AMBER}"/>'
-             + t(xs[i], ys[i] - 14, f"peak · {vals[i]}", 10, AMBER, anchor="middle", ls=.4) + "</g>")
+    body += (f'<g class="fade" style="animation-delay:2.2s"><circle class="pulse" cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="5" fill="none" stroke="{ACCENT}" stroke-width="1.2"/>'
+             f'<circle cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="3.5" fill="{ACCENT}"/>'
+             + t(xs[i], ys[i] - 14, f"peak · {vals[i]}", 13, ACCENT, "di", anchor="middle", ls=.4) + "</g>")
     return svg(W, H, body, "Contribution activity over the last 90 days")
 
 

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/make-stats.py", ".github/workflows/stats.yml"]
+    paths: ["scripts/make-stats.py", "scripts/theme.py", "scripts/fonts/**", ".github/workflows/stats.yml"]
 
 permissions:
   contents: write
@@ -23,6 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install fonttools brotli
       - name: Render stats cards
         run: python scripts/make-stats.py ${{ github.repository_owner }}
         env:

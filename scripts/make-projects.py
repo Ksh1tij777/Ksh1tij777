@@ -5,42 +5,38 @@ import math, random
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "assets" / "projects"; OUT.mkdir(parents=True, exist_ok=True)
-W, H = 600, 330
-BG, PANEL, FG, MUTED, RULE = "#0d1124", "#141a33", "#e6e9f5", "#8b93b0", "#2a3150"
-LAV, CYAN, AMBER, RED, GREEN = "#a5b4fc", "#67e8f9", "#fcd34d", "#f87171", "#86efac"
-MONO = "'JetBrains Mono','IBM Plex Mono',Consolas,'SFMono-Regular',Menlo,monospace"
-SANS = "'Inter','Segoe UI',Helvetica,Arial,sans-serif"
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from theme import ACCENT, BG, FAINT, FG, MUTED, OCHRE, RULE, SAGE, svg as theme_svg, text as ttext
 
-BASE_CSS = """
+W, H = 600, 330
+PANEL = "#1c1a17"
+# role colours: lines/ink = FG, highlight = ACCENT, caution = OCHRE, ok = SAGE
+LAV, CYAN, AMBER, RED, GREEN = FG, FG, OCHRE, ACCENT, SAGE
+MONO, SANS = "m", "s"
+
+CARD_CSS = """
 .draw{stroke-dasharray:var(--len,800);stroke-dashoffset:var(--len,800);animation:draw 6s ease-in-out infinite}
 @keyframes draw{0%{stroke-dashoffset:var(--len,800)}35%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
-.flow{stroke-dasharray:4 6;animation:flow 1.2s linear infinite}
-@keyframes flow{to{stroke-dashoffset:-20}}
-.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 1.8s ease-out infinite}
-@keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:.8}100%{transform:scale(2.6);opacity:0}}
 .blink{animation:blink 6s ease-in-out infinite}
 @keyframes blink{0%,30%{opacity:0}40%,85%{opacity:1}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;stroke-dashoffset:0!important;opacity:1!important}}
 """
 
 def t(x, y, s, size=10.5, fill=MUTED, font=MONO, anchor="start", weight=None, ls=1.2, extra=""):
-    w = f' font-weight="{weight}"' if weight else ""
-    return (f'<text x="{x}" y="{y}" font-family="{font}" font-size="{size}" fill="{fill}" '
-            f'text-anchor="{anchor}" letter-spacing="{ls}"{w} {extra}>{s}</text>')
+    cls = font if font in ("d", "di", "m", "mm", "s") else "m"
+    if weight and cls == "m":
+        cls = "mm"
+    return ttext(x, y, s, cls, size, fill, anchor, ls, extra)
 
 def frame(kicker, title, badge, desc_lines, body, css="", label=""):
-    desc = "".join(t(28, 284 + i * 21, l, 14.5, FG, SANS, ls=0) for i, l in enumerate(desc_lines))
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{label}">
-<style>{BASE_CSS}{css}</style>
-<rect width="{W}" height="{H}" rx="14" fill="{BG}"/>
-<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{RULE}"/>
-{t(28, 38, kicker, 11, CYAN, ls=1.8)}
-{t(28, 72, title, 30, FG, SANS, weight=700, ls=-.5)}
-{t(572, 38, badge, 11, AMBER, anchor="end", ls=1.4)}
-{body}
-<line x1="28" x2="572" y1="258" y2="258" stroke="{RULE}"/>
-{desc}
-</svg>'''
+    desc = "".join(t(28, 284 + i * 21, l, 14, MUTED, "s", ls=0) for i, l in enumerate(desc_lines))
+    head = (t(28, 40, kicker, 10.5, MUTED, ls=1.8)
+            + t(26, 74, title, 38, FG, "d", ls=-.6)
+            + t(572, 40, badge, 10.5, ACCENT, anchor="end", weight=500, ls=1.4))
+    return theme_svg(W, H, head + body + f'<line x1="28" x2="572" y1="258" y2="258" stroke="{RULE}"/>' + desc,
+                     label, CARD_CSS + css)
 
 # ---------------------------------------------------------------- 1. Route Resilience
 def route_resilience():
@@ -49,10 +45,10 @@ def route_resilience():
     tiles = []
     for i in range(N):
         for j in range(M):
-            g = rnd.choice(["#1b2340", "#1e2a48", "#22304f", "#1a2a3a", "#203a38"])
+            g = rnd.choice(["#1d1b18", "#211f1b", "#24221e", "#1a1916", "#262420"])
             tiles.append(f'<rect x="{X0+i*CELL}" y="{Y0+j*CELL}" width="{CELL-1.5}" height="{CELL-1.5}" rx="2" fill="{g}"/>')
     # a few "cloud / tree occlusion" blobs
-    occl = "".join(f'<rect x="{X0+i*CELL}" y="{Y0+j*CELL}" width="{CELL*w-1.5}" height="{CELL*h-1.5}" rx="4" fill="#3a4466" opacity=".55"/>'
+    occl = "".join(f'<rect x="{X0+i*CELL}" y="{Y0+j*CELL}" width="{CELL*w-1.5}" height="{CELL*h-1.5}" rx="4" fill="#3a362f" opacity=".7"/>'
                    for i, j, w, h in [(3, 2, 2, 2), (8, 6, 3, 2)])
     roads = [
         ("M28 159 C80 155 120 165 210 158", 190),
@@ -84,7 +80,7 @@ def route_resilience():
         if u + v in crit:
             es.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{AMBER}" stroke-width="3" class="critical"/>')
         else:
-            es.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="#4b5580" stroke-width="1.6"/>')
+            es.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="#4a463f" stroke-width="1.6"/>')
     ns = []
     for k, (x, y) in nodes.items():
         c = AMBER if k in "cfj" else LAV
@@ -113,8 +109,8 @@ def route_resilience():
 # ---------------------------------------------------------------- 2. Cassandra
 def cassandra():
     # trace waterfall on the left
-    spans = [(0, 150, "agent.run", LAV), (14, 60, "llm.plan", "#6b7bd6"), (30, 46, "tool.lookup", RED),
-             (80, 56, "llm.answer", "#6b7bd6"), (96, 40, "respond", "#6b7bd6")]
+    spans = [(0, 150, "agent.run", LAV), (14, 60, "llm.plan", "#6f685d"), (30, 46, "tool.lookup", RED),
+             (80, 56, "llm.answer", "#6f685d"), (96, 40, "respond", "#6f685d")]
     X0, Y0 = 28, 108
     rows = []
     for k, (off, w, name, c) in enumerate(spans):
@@ -125,7 +121,7 @@ def cassandra():
         rows.append(t(X0, y + 10, name, 9.5, MUTED, ls=.4))
     bad_y = Y0 + 2 * 24 + 6
     flag = (f'<circle class="pulse" cx="{X0+70+30+46+10}" cy="{bad_y}" r="5" fill="none" stroke="{RED}" stroke-width="1.5"/>'
-            + t(X0 + 70 + 30 + 46 + 20, bad_y + 4, "empty → fabricated", 9.5, RED, ls=.3))
+            + t(X0 + 70 + 30 + 46 + 28, bad_y + 4, "empty → fabricated", 9.5, RED, ls=.3))
     eye_scan = f'<rect class="eyescan" x="{X0+66}" y="{Y0-6}" width="2" height="122" fill="{CYAN}" opacity=".8"/>'
     waterfall = t(X0, 95, "PHOENIX TRACE", 10, MUTED, ls=1.4) + "".join(rows) + eye_scan + flag
 
@@ -156,7 +152,7 @@ def cassandra():
 .iris{transform-box:fill-box;transform-origin:center;animation:look 4s ease-in-out infinite}
 @keyframes look{0%,100%{transform:translate(-5px,0)}50%{transform:translate(5px,0)}}"""
     body = waterfall + link + ring + "".join(st) + orbit + eye + fixed
-    return frame("THE AGENT THAT WATCHES AGENTS", "Cassandra", "🥇 1ST / 14,000+ · GOOGLE CLOUD",
+    return frame("THE AGENT THAT WATCHES AGENTS", "Cassandra", "1ST OF 14,000+ · GOOGLE CLOUD",
                  ["Reads live Phoenix traces, catches the failing span, writes evals, patches the",
                   "prompt and red-teams its own fix. No human in the loop."],
                  body, css, "Cassandra project card")
@@ -207,7 +203,7 @@ def driver_score():
                     for f, v in [(0, "300"), (.5, "600"), (1, "900")])
     needle = (f'<g class="needle"><line x1="{cx}" y1="{cy}" x2="{cx-R+24}" y2="{cy}" stroke="{FG}" stroke-width="2.5" stroke-linecap="round"/></g>'
               f'<circle cx="{cx}" cy="{cy}" r="6" fill="{FG}"/>')
-    score = (t(cx - 24, cy - 12, "742", 24, FG, SANS, anchor="middle", weight=700, ls=0, extra='class="blink"')
+    score = (t(cx - 26, cy - 10, "742", 34, FG, "d", anchor="middle", ls=0, extra='class="blink"')
              + t(cx, cy + 22, "SAFETY SCORE", 9.5, MUTED, anchor="middle", ls=1.4)
              + t(cx, cy + 38, "→ lower premium", 9.5, GREEN, anchor="middle", ls=.4, extra='class="blink"'))
     # needle sweeps 300 → ~742 (frac .737 → 132.7deg), holds, returns
