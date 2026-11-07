@@ -27,7 +27,7 @@
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="52%" valign="top">
 
 ```python
 class Kshitij:
@@ -43,18 +43,16 @@ class Kshitij:
 ```
 
 </td>
-<td width="45%" valign="top">
+<td width="48%" valign="top">
 
 **🏅 Wins**
 
-| | |
-|:-:|:--|
-| 🥇 | Google Cloud Rapid Agent Hackathon — **1st / 14,000+** |
-| 🥇 | HackCrux 36-hr — **Winner** (telematics) |
-| 🥇 | Space IDEATHON — **1st** |
-| 🥈 | Space Hackathon — **2nd** |
-| 🏁 | Control+Space — **4th** |
-| ✅ | Smart India Hackathon — R1 qualified |
+- 🥇 **1st / 14,000+** · Google Cloud Rapid Agent Hackathon
+- 🥇 **Winner** · HackCrux 36-hr (telematics)
+- 🥇 **1st** · Space IDEATHON
+- 🥈 **2nd** · Space Hackathon
+- 🏁 **4th** · Control+Space
+- ✅ **R1 qualified** · Smart India Hackathon
 
 </td>
 </tr>
