@@ -8,7 +8,6 @@
 
 <p align="center">
   <a href="mailto:vermakshitij747@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hi-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <a href="https://codeforces.com/profile/kv777"><img src="https://img.shields.io/badge/Codeforces-kv777-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" /></a>
   <img src="https://komarev.com/ghpvc/?username=Ksh1tij777&style=for-the-badge&color=7c3aed&label=VIEWS" />
 </p>
@@ -106,36 +105,18 @@ class Kshitij:
 
 <img src="assets/divider.svg" width="100%" />
 
-## 📊 GitHub stats
+## 📊 Telemetry
+
+<table>
+<tr>
+<td width="50%"><img src="assets/stats/overview.svg" width="100%" alt="GitHub stats: contributions, commits, merged PRs, repos, stars, streaks" /></td>
+<td width="50%"><img src="assets/stats/languages.svg" width="100%" alt="Most used languages" /></td>
+</tr>
+</table>
 
 <p align="center">
-  <img src="profile-summary-card-output/tokyonight/0-profile-details.svg" width="100%" />
+  <img src="assets/stats/activity.svg" width="100%" alt="Contribution activity, last 90 days" />
 </p>
-
-<p align="center">
-  <img src="profile-summary-card-output/tokyonight/3-stats.svg" width="49%" />
-  <img src="profile-summary-card-output/tokyonight/2-most-commit-language.svg" width="49%" />
-</p>
-
-<p align="center">
-  <img src="profile-summary-card-output/tokyonight/1-repos-per-language.svg" width="49%" />
-  <img src="profile-summary-card-output/tokyonight/4-productive-time.svg" width="49%" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Ksh1tij777&theme=tokyonight&hide_border=true&border_radius=12&date_format=M%20j%5B%2C%20Y%5D" />
-</p>
-
-<details>
-<summary><b>🧊 3D contribution calendar · languages · achievements</b> (click to expand)</summary>
-<br/>
-<p align="center">
-  <img src="assets/metrics/isocalendar.svg" />
-  <img src="assets/metrics/languages.svg" />
-  <img src="assets/metrics/achievements.svg" />
-  <img src="assets/metrics/overview.svg" />
-</p>
-</details>
 
 <img src="assets/divider.svg" width="100%" />
 
@@ -149,4 +130,4 @@ class Kshitij:
   </picture>
 </p>
 
-<p align="center"><sub>Stats and the snake are rebuilt daily by GitHub Actions in this repo — no third-party servers.</sub></p>
+<p align="center"><sub>Stats refresh twice a day and the snake daily, both via GitHub Actions in this repo — no third-party servers.</sub></p>
