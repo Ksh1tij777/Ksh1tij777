@@ -18,6 +18,7 @@ import urllib.request
 from pathlib import Path
 
 USER = next((a for a in sys.argv[1:] if not a.startswith("--")), os.environ.get("GITHUB_USER", "Ksh1tij777"))
+EXCLUDE = {"HTML", "Batchfile"}  # generated/boilerplate files skew byte counts
 OUT = Path(__file__).resolve().parent.parent / "assets" / "stats"
 
 BG, FG, MUTED, RULE = "#0d1124", "#e6e9f5", "#8b93b0", "#2a3150"
@@ -157,10 +158,12 @@ def languages(u):
     for r in u["repositories"]["nodes"]:
         for e in r["languages"]["edges"]:
             n = e["node"]["name"]
+            if n in EXCLUDE:
+                continue
             totals.setdefault(n, [0, e["node"]["color"] or LAV])[0] += e["size"]
     top = sorted(totals.items(), key=lambda kv: -kv[1][0])[:6]
     total = sum(v[0] for _, v in top) or 1
-    body = t(28, 38, "LANGUAGES", 11, CYAN, ls=1.8) + t(572, 38, "BY BYTES · PUBLIC REPOS", 11, AMBER, anchor="end", ls=1.2)
+    body = t(28, 38, "LANGUAGES", 11, CYAN, ls=1.8) + t(572, 38, "BY CODE SIZE · PUBLIC REPOS", 11, AMBER, anchor="end", ls=1.2)
     # stacked bar
     x = 28
     for i, (name, (size, color)) in enumerate(top):
