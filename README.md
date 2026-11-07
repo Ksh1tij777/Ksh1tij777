@@ -1,39 +1,142 @@
-<h1 align="center">Hi, I'm Kshitij</h1>
-<h3 align="center">just your friendly neighbourhood contributor</h3>
-
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ksh1tij777" alt="ksh1tij777" /></a> </p>
-
-- I’m currently working on [Electricity Cost predictor](https://github.com/Ksh1tij777/Electricity-Price-Prediction)
-
-- I’m currently learning **Machine Learning and Data Science**
-
-- I’m looking to collaborate on **ML projects**
-
-- How to reach me **vermakshitij747@gmail.com**
-
-- Previous Experience : **Trainee at Mentox, Summer intern at Gnani.ai**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/kshitij verma" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="kshitij verma" height="30" width="40" /></a>
-<a href="https://codeforces.com/profile/kv777" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="kv777" height="30" width="40" /></a>
+<!-- ===================== HEADER ===================== -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=190&section=header&text=Kshitij%20Verma&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=ML%20Engineer%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20AI%20Agents&descAlignY=58&descSize=17" alt="header" />
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> </p>
+<p align="center">
+  <a href="https://github.com/Ksh1tij777">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&pause=1100&color=4FC3F7&center=true&vCenter=true&width=620&lines=%F0%9F%A5%87+1st+%2F+14%2C000%2B+%E2%80%94+Google+Cloud+Rapid+Agent+Hackathon;Building+agents+that+watch+other+agents;Computer+vision+for+motor+insurance;B.Tech+CCE+%40+LNMIIT+Jaipur+%E2%80%9928" alt="typing" />
+  </a>
+</p>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ksh1tij777&show_icons=true&locale=en&layout=compact" alt="ksh1tij777" /></p>
+<p align="center">
+  <a href="mailto:vermakshitij747@gmail.com"><img src="https://img.shields.io/badge/Email-vermakshitij747%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG/"><img src="https://img.shields.io/badge/LinkedIn-Kshitij%20Verma-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://codeforces.com/profile/kv777"><img src="https://img.shields.io/badge/Codeforces-kv777-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" /></a>
+  <img src="https://komarev.com/ghpvc/?username=Ksh1tij777&style=for-the-badge&color=2c5364&label=PROFILE+VIEWS" />
+</p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ksh1tij777&show_icons=true&locale=en" alt="ksh1tij777" /></p>
+---
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ksh1tij777&" alt="ksh1tij777" /></p>
+## 🏆 Featured: Google Cloud Rapid Agent Hackathon 2026 — **1st Place**
 
-###
+<table>
+<tr>
+<td width="58%" valign="top">
 
-<div align="center">
-  <img height="200" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjI3NncycXFpbGRvcXJ1bWFkaWt5c2IxY2F3czdvdzRsbHN0bTQ4ayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7zdsOWDgSCzDi/giphy.gif"  />
-</div>
+### 🔮 Cassandra — *the meta-agent that watches other agents*
 
+**🥇 1st place, Arize track** — out of **14,000+ participants** · **$5,000 prize**
+Built with [@SirjanSingh](https://github.com/SirjanSingh)
 
+Agents fail silently. Cassandra watches a production agent through **Arize Phoenix** traces and closes the loop on its own:
 
+`watch → diagnose → root-cause → synthesize evals → evaluate → patch → replay → red-team`
+
+- LLM-as-judge classifies failures: hallucination, prompt drift, tool failure
+- Turns each incident into an adversarial eval dataset
+- Proposes a prompt patch, proves it on the original failing input, then red-teams the fix
+- **Watches itself too** — its own reasoning is traced and scored against a hand-labelled trap set
+
+**Stack:** Gemini 2.5 · Vertex AI · Arize Phoenix · Cloud Run · Firestore
+
+</td>
+<td width="42%" valign="middle" align="center">
+
+<a href="https://github.com/SirjanSingh/cassandra">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=SirjanSingh&repo=cassandra&theme=tokyonight&hide_border=true&border_radius=10" alt="Cassandra repo" />
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/SirjanSingh/cassandra"><img src="https://img.shields.io/badge/View%20Repository-Cassandra-7C3AED?style=for-the-badge&logo=github" /></a>
+
+</td>
+</tr>
+</table>
+
+---
+
+## 👨‍💻 About me
+
+```python
+class Kshitij:
+    role       = "ML Engineer @ Surveyors AI (Bootit Infosolutions)"
+    education  = "B.Tech, Communication & Computer Engineering — LNMIIT Jaipur (2024–28)"
+    building   = ["CV for motor-insurance claims", "LLM agent observability", "telematics risk scoring"]
+    previously = ["AI Engineering Intern @ Gnani.ai", "Mentor & Organizer @ Mentox"]
+    off_hours  = ["Coordinator, LNMIIT Astronomy Club", "competitive programming"]
+    open_to    = "Summer 2027 ML / AI engineering internships"
+```
+
+---
+
+## 🚀 Projects
+
+| Project | What it does | Stack |
+|---|---|---|
+| 🔮 [**Cassandra**](https://github.com/SirjanSingh/cassandra) | Self-healing observability agent for LLM agents — **🥇 Google Cloud hackathon winner** | Gemini, Vertex AI, Arize Phoenix, Cloud Run |
+| 🚗 [**Driver Safety Scoring**](https://github.com/Ksh1tij777/Car_Behaviour) | "CIBIL-style" telematics score for pay-how-you-drive insurance, built on UAH-DriveSet | Python, scikit-learn, signal processing |
+| 🛵 **Two-wheeler damage AI** *(work, private)* | Damage segmentation and fraud signals for bike insurance claims | PyTorch, SegFormer, EfficientNet |
+| 🛰️ **Route Resilience** | Road extraction from Sentinel-2 imagery plus graph criticality analysis for Indian cities | SegFormer, clDice, NetworkX |
+| 🎓 [**LNMAchieves**](https://github.com/Ksh1tij777/SWE_PROJECT) | Student achievement portal with a mentor → HOD approval workflow and a public wall | Python, Flask, SQLite |
+| 📈 [**Stock Order Replicator**](https://github.com/Ksh1tij777/Stock_Bot) | Watches an order form and replicates trades across accounts | Python, Selenium |
+| ⚡ [**Electricity Price Prediction**](https://github.com/Ksh1tij777/Electricity-Price-Prediction) | Random-forest price model served over an API | scikit-learn, FastAPI |
+
+---
+
+## 🏅 Achievements
+
+- 🥇 **1st / 14,000+** — Google Cloud Rapid Agent Hackathon 2026, Arize track ($5,000)
+- 🥇 **Winner** — HackCrux 36-hour hackathon (telematics driver-behaviour scoring)
+- 🥇 **1st** — Space IDEATHON
+- 🥈 **2nd** — Space Hackathon
+- 🏁 **4th** — Control+Space
+- ✅ Smart India Hackathon — Round 1 qualified
+
+---
+
+## 🛠️ Tech stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,cpp,c,js,html,css&perline=12" />
+  <br/>
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv,fastapi,flask&perline=12" />
+  <br/>
+  <img src="https://skillicons.dev/icons?i=gcp,docker,git,linux,mongodb,mysql,threejs,arduino,selenium&perline=12" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vertex%20AI-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" />
+  <img src="https://img.shields.io/badge/Arize%20Phoenix-FF4B4B?style=flat-square" />
+  <img src="https://img.shields.io/badge/SegFormer-0A0A0A?style=flat-square" />
+  <img src="https://img.shields.io/badge/EfficientNet-0A0A0A?style=flat-square" />
+</p>
+
+---
+
+## 📊 GitHub stats
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Ksh1tij777&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&border_radius=10" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ksh1tij777&layout=compact&langs_count=6&theme=tokyonight&hide_border=true&border_radius=10" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=Ksh1tij777&theme=tokyonight&hide_border=true&border_radius=10" />
+</p>
+
+<p align="center">
+  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=Ksh1tij777&theme=tokyo-night&hide_border=true&area=true&radius=10" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Ksh1tij777&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&row=1&column=7" />
+</p>
+
+<!-- ===================== FOOTER ===================== -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=110&section=footer" />
+</p>
